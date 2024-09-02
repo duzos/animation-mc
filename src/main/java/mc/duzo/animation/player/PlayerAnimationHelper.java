@@ -17,7 +17,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 
 import mc.duzo.animation.player.holder.PlayerAnimationHolder;
-import mc.duzo.animation.registry.client.AnimationRegistry;
+import mc.duzo.animation.registry.AnimationRegistry;
 
 /**
  * From {@link net.minecraft.client.render.entity.animation.AnimationHelper},
@@ -112,7 +112,7 @@ public class PlayerAnimationHelper {
     }
 
     public static void playAnimation(AbstractClientPlayerEntity player, Identifier animation) {
-        playAnimation(player, (PlayerAnimationHolder) AnimationRegistry.REGISTRY.get(animation).get());
+        playAnimation(player, (PlayerAnimationHolder) AnimationRegistry.instance().get(animation).get());
     }
     public static void playAnimation(AbstractClientPlayerEntity player, PlayerAnimationHolder holder) {
         stopAnimation(player);

@@ -10,6 +10,7 @@ import mc.duzo.animation.generic.AnimationHolder;
 import mc.duzo.animation.generic.AnimationTracker;
 import mc.duzo.animation.network.Network;
 import mc.duzo.animation.network.PlayAnimationS2CPacket;
+import mc.duzo.animation.registry.AnimationRegistry;
 
 public class DuzoAnimationMod implements ModInitializer {
     public static final String MOD_ID = "animation";
@@ -19,6 +20,8 @@ public class DuzoAnimationMod implements ModInitializer {
     @Override
     public void onInitialize() {
         LOGGER.info("thank you for using duzos animator!");
+
+        AnimationRegistry.init();
     }
 
     // todo - move to better place

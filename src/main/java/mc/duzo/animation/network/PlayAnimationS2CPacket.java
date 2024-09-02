@@ -15,7 +15,7 @@ import net.minecraft.util.Identifier;
 import mc.duzo.animation.DuzoAnimationMod;
 import mc.duzo.animation.generic.AnimationHolder;
 import mc.duzo.animation.generic.AnimationTracker;
-import mc.duzo.animation.registry.client.AnimationRegistry;
+import mc.duzo.animation.registry.AnimationRegistry;
 import mc.duzo.animation.registry.client.TrackerRegistry;
 
 public record PlayAnimationS2CPacket(UUID player, Identifier tracker, Identifier animation) implements FabricPacket {
@@ -43,7 +43,7 @@ public record PlayAnimationS2CPacket(UUID player, Identifier tracker, Identifier
         AnimationTracker tracker = TrackerRegistry.REGISTRY.get(tracker());
         if (tracker == null) return;
 
-        Supplier<AnimationHolder> supplier = AnimationRegistry.REGISTRY.get(animation());
+        Supplier<AnimationHolder> supplier = (Supplier<AnimationHolder>) AnimationRegistry.instance().REGISTRY.get(animation());
         if (supplier == null) return;
 
         tracker.add(player(), supplier.get());
