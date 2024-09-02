@@ -23,6 +23,7 @@ public class PerspectiveMixin {
         AnimationInfo info = AnimationUtil.getInfo(player);
 
         if (info == null) return;
+        if (info.perspective() == null) return;
 
         cir.setReturnValue(info.perspective().isFirstPerson());
     }
@@ -35,6 +36,7 @@ public class PerspectiveMixin {
         AnimationInfo info = AnimationUtil.getInfo(player);
 
         if (info == null) return;
+        if (info.perspective() == null) return;
 
         cir.setReturnValue(info.perspective().isFrontView());
     }
