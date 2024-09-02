@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "animation",
+	"version": "${version}",
+	"name": "animation",
+	"description": "duzos animation library",
+	"authors": [
+		"duzo"
+	],
+	"contact": {
+		"homepage": "https://duzo.is-a.dev/",
+		"sources": "https://github.com/Duzos/animation-mc"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/animation/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"mc.duzo.animation.DuzoAnimationMod"
+		],
+		"fabric-datagen": [
+			"mc.duzo.animation.datagen.AnimationDataGenerator"
+		]
+	},
+	"mixins": [
+		"animation.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.3",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"timeless": "*"
+	}
+}
