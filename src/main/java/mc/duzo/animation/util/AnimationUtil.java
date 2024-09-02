@@ -2,6 +2,7 @@ package mc.duzo.animation.util;
 
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 
+import mc.duzo.animation.api.AnimationEvents;
 import mc.duzo.animation.generic.AnimationHolder;
 import mc.duzo.animation.generic.AnimationInfo;
 import mc.duzo.animation.generic.AnimationTracker;
@@ -17,7 +18,10 @@ public class AnimationUtil {
             return holder.getInfo();
         }
 
-        return null;
+        AnimationEvents.Result<AnimationInfo> result = AnimationEvents.FIND_ANIMATION_INFO.invoker().getAnimationInfo(player);
+        if (result.result().isEmpty()) return null;
+
+        return result.result().get();
     }
 
     public static boolean isRunningAnimations(AbstractClientPlayerEntity player) {
