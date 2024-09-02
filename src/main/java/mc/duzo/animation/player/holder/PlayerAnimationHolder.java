@@ -4,18 +4,19 @@ import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.entity.animation.Animation;
 import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.client.render.entity.model.PlayerEntityModel;
+import net.minecraft.util.Identifier;
 
 import mc.duzo.animation.generic.AnimationHolder;
 import mc.duzo.animation.generic.AnimationInfo;
 import mc.duzo.animation.player.PlayerAnimationHelper;
 
 public class PlayerAnimationHolder extends AnimationHolder {
-
-    public PlayerAnimationHolder(Animation anim, AnimationInfo info) {
-        super(anim, info);
+    public PlayerAnimationHolder(Identifier id, Animation anim, AnimationInfo info) {
+        super(id, anim, info);
     }
-    public PlayerAnimationHolder(Animation anim) {
-        super(anim);
+
+    public PlayerAnimationHolder(Identifier id, Animation anim) {
+        super(id, anim);
     }
 
     @Override

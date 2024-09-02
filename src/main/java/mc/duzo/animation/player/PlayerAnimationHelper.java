@@ -13,9 +13,11 @@ import net.minecraft.client.render.entity.animation.Keyframe;
 import net.minecraft.client.render.entity.animation.Transformation;
 import net.minecraft.client.render.entity.model.PlayerEntityModel;
 import net.minecraft.entity.AnimationState;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 
 import mc.duzo.animation.player.holder.PlayerAnimationHolder;
+import mc.duzo.animation.registry.client.AnimationRegistry;
 
 /**
  * From {@link net.minecraft.client.render.entity.animation.AnimationHelper},
@@ -109,8 +111,8 @@ public class PlayerAnimationHelper {
         return (anim != null && !anim.isFinished(livingEntity));
     }
 
-    public static void playAnimation(AbstractClientPlayerEntity player, Animation animation) {
-        playAnimation(player, new PlayerAnimationHolder(animation));
+    public static void playAnimation(AbstractClientPlayerEntity player, Identifier animation) {
+        playAnimation(player, (PlayerAnimationHolder) AnimationRegistry.REGISTRY.get(animation).get());
     }
     public static void playAnimation(AbstractClientPlayerEntity player, PlayerAnimationHolder holder) {
         stopAnimation(player);

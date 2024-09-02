@@ -4,21 +4,30 @@ import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.entity.animation.Animation;
 import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.entity.AnimationState;
+import net.minecraft.util.Identifier;
 
 import mc.duzo.animation.player.PlayerAnimationHelper;
+import mc.duzo.animation.registry.Identifiable;
 
-public abstract class AnimationHolder {
+public abstract class AnimationHolder implements Identifiable {
+    private final Identifier id;
     protected final AnimationState state;
     protected final Animation animation;
     protected final AnimationInfo info;
 
-    protected AnimationHolder(Animation anim, AnimationInfo info) {
+    protected AnimationHolder(Identifier id, Animation anim, AnimationInfo info) {
+        this.id = id;
         this.state = new AnimationState();
         this.animation = anim;
         this.info = info;
     }
-    protected AnimationHolder(Animation anim) {
-        this(anim, new AnimationInfo(AnimationInfo.RenderType.ALL, AnimationInfo.Perspective.THIRD_PERSON_FRONT, AnimationInfo.Movement.DISABLE, AnimationInfo.Transform.ALL));
+    protected AnimationHolder(Identifier id, Animation anim) {
+        this(id, anim, new AnimationInfo(AnimationInfo.RenderType.ALL, AnimationInfo.Perspective.THIRD_PERSON_FRONT, AnimationInfo.Movement.DISABLE, AnimationInfo.Transform.ALL));
+    }
+
+    @Override
+    public Identifier id() {
+        return this.id;
     }
 
     public void update(EntityModel<?> model, float progress, AbstractClientPlayerEntity player) {
