@@ -18,6 +18,9 @@
 		"main": [
 			"mc.duzo.animation.DuzoAnimationMod"
 		],
+		"client": [
+			"mc.duzo.animation.client.DuzoAnimationClient"
+		],
 		"fabric-datagen": [
 			"mc.duzo.animation.datagen.AnimationDataGenerator"
 		]

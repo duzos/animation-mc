@@ -11,6 +11,6 @@ public class DuzoAnimationMod implements ModInitializer {
 
     @Override
     public void onInitialize() {
-
+        LOGGER.info("thank you for using duzos animator!");
     }
 }
