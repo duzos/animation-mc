@@ -13,6 +13,11 @@
 This project is sponsored by BisectHosting!
 Use code [duzo](https://www.bisecthosting.com/duzo) for **25%** OFF!
 
+## What does this mod do?
+This mod is a library for developers to use
+
+It allows for animations to be played on players easily
+
 ## Credits
 
 ### Developers:
