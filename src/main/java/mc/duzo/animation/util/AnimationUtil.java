@@ -25,6 +25,7 @@ public class AnimationUtil {
     }
 
     public static boolean isRunningAnimations(AbstractClientPlayerEntity player) {
-        return getInfo(player) != null;
+        AnimationInfo info = getInfo(player);
+        return info != null && info.transform() != null;
     }
 }
