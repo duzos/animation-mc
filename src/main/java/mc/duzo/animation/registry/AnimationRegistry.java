@@ -26,5 +26,11 @@ public class AnimationRegistry<H extends AnimationHolder, T extends Supplier<H>>
         INSTANCE = new AnimationRegistry();
     }
 
-    public static AnimationRegistry instance() { return INSTANCE; }
+    public static AnimationRegistry instance() {
+        if (INSTANCE == null) {
+            INSTANCE = new AnimationRegistry();
+        }
+
+        return INSTANCE;
+    }
 }
