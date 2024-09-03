@@ -18,7 +18,7 @@ This mod is a library for developers to use
 
 It allows for animations to be played on players easily
 
-# Mods that use this library
+## Mods that use this library
 - [Timeless Heroes](https://www.modrinth.com/mod/superhero)
 
 ## Credits
