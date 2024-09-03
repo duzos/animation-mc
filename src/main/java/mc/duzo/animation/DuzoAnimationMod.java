@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.util.Identifier;
 
 import mc.duzo.animation.generic.AnimationHolder;
 import mc.duzo.animation.generic.AnimationTracker;
@@ -27,5 +28,8 @@ public class DuzoAnimationMod implements ModInitializer {
     // todo - move to better place
     public static void play(ServerPlayerEntity target, AnimationTracker tracker, AnimationHolder animation) {
         Network.toTracking(new PlayAnimationS2CPacket(target, tracker, animation), target);
+    }
+    public static void play(ServerPlayerEntity target, AnimationTracker tracker, Identifier animation) {
+        Network.toTracking(new PlayAnimationS2CPacket(target.getUuid(), tracker.id(), animation), target);
     }
 }
