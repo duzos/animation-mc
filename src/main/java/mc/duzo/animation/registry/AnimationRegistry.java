@@ -23,7 +23,7 @@ public class AnimationRegistry<H extends AnimationHolder, T extends Supplier<H>>
     public Supplier<H> get(Identifier id) { return REGISTRY.get(id); }
 
     public static void init() {
-        INSTANCE = new AnimationRegistry();
+        instance();
     }
 
     public static AnimationRegistry instance() {
