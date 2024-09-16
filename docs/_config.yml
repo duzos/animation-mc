@@ -2,11 +2,30 @@ title: Duzo's Animation Mod
 description: Documentation for Developers wanting to use my animation library
 theme: just-the-docs
 
-url: https://duzos.github.io
+url: https://duzos.github.io/animation-mc
 logo: "https://raw.githubusercontent.com/Duzos/animation-mc/master/src/main/resources/assets/animation/icon.png"
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
 
 aux_links:
   "GitHub":
     - "//github.com/duzos/animation-mc"
   "Modrinth":
     - "//modrinth.com/mod/animator"
+
+# Footer last edited timestamp
+last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
+last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
+
+# Footer "Edit this page on GitHub" link text
+gh_edit_link: true # show or hide edit this page link
+gh_edit_link_text: "Edit this page on GitHub."
+gh_edit_repository: "https://github.com/duzos/animation-mc" # the github URL for your repo
+gh_edit_branch: "master" # the branch that your docs is served from
+gh_edit_source: docs # the source that your files originate from
+gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately

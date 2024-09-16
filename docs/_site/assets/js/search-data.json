@@ -1,9 +1,114 @@
 {"0": {
+    "doc": "Animation Info",
+    "title": "Animation Info",
+    "content": " ",
+    "url": "/info/animation_info.html",
+    
+    "relUrl": "/info/animation_info.html"
+  },"1": {
+    "doc": "Animation Info",
+    "title": "What is this?",
+    "content": "This is information for an animation to read and apply to the player while its running. It can be passed into the constructor of an AnimationHolder . ",
+    "url": "/info/animation_info.html#what-is-this",
+    
+    "relUrl": "/info/animation_info.html#what-is-this"
+  },"2": {
+    "doc": "Animation Info",
+    "title": "Modifiers",
+    "content": "Currently, this info modifies 4 parts: . RenderType . | Defines which parts of the player should be rendered. | . Perspective . | The camera perspective the player should be forced into, eg third person front | . Movement . | Whether the player is allowed to move while this animation runs | . Transform . | Whether to reset the entire model or just the targeted parts | . Any of these modifiers can be null if they are not needed. ",
+    "url": "/info/animation_info.html#modifiers",
+    
+    "relUrl": "/info/animation_info.html#modifiers"
+  },"3": {
+    "doc": "Animation Registry",
+    "title": "Animation Registry",
+    "content": " ",
+    "url": "/registry/animation_registry.html",
+    
+    "relUrl": "/registry/animation_registry.html"
+  },"4": {
+    "doc": "Animation Registry",
+    "title": "What is this?",
+    "content": "This is where all animations are stored. They are registered with an identifier and a supplier which will create a new instance of the AnimatonHolder. ",
+    "url": "/registry/animation_registry.html#what-is-this",
+    
+    "relUrl": "/registry/animation_registry.html#what-is-this"
+  },"5": {
+    "doc": "Animation Registry",
+    "title": "Examples",
+    "content": "See Timeless Heroes . ",
+    "url": "/registry/animation_registry.html#examples",
+    
+    "relUrl": "/registry/animation_registry.html#examples"
+  },"6": {
     "doc": "Home",
     "title": "Home",
     "content": "TODO . ",
     "url": "/",
     
     "relUrl": "/"
+  },"7": {
+    "doc": "Player Animations",
+    "title": "Playing animations on a Player",
+    "content": " ",
+    "url": "/tutorial/player.html#playing-animations-on-a-player",
+    
+    "relUrl": "/tutorial/player.html#playing-animations-on-a-player"
+  },"8": {
+    "doc": "Player Animations",
+    "title": "Blockbench",
+    "content": "You will need to create a custom animation on this player model and export it to yarn mappings . Store this exported animation in a class, for example ModPlayerAnimations . ",
+    "url": "/tutorial/player.html#blockbench",
+    
+    "relUrl": "/tutorial/player.html#blockbench"
+  },"9": {
+    "doc": "Player Animations",
+    "title": "Registering",
+    "content": "In your ModPlayerAnimations class create a public static void method called init and leave its body empty. Call this init method in the client initializer (onInitializeClient) . Now, create a static variable similar to this one . public static final Supplier&lt;PlayerAnimationHolder&gt; MY_ANIMATION = AnimationRegistry.instance().register(() -&gt; new PlayerAnimationHolder(new Identifier(MyMod.MOD_ID, \"my_animation\"), ModPlayerAnimations.MY_ANIMATION_KEYFRAMES)); . This registers the animation to the mod and it can now be used. AnimationInfo can be passed into the constructor to modify the animation. ",
+    "url": "/tutorial/player.html#registering",
+    
+    "relUrl": "/tutorial/player.html#registering"
+  },"10": {
+    "doc": "Player Animations",
+    "title": "Using the animation",
+    "content": "Now that the animation has been registered we can use it. When you want the animation to play, call: . DuzoAnimationMod.play(player, TrackerRegistry.PLAYER, MY_ANIMATION.get()); . and it should play! . ",
+    "url": "/tutorial/player.html#using-the-animation",
+    
+    "relUrl": "/tutorial/player.html#using-the-animation"
+  },"11": {
+    "doc": "Player Animations",
+    "title": "Player Animations",
+    "content": " ",
+    "url": "/tutorial/player.html",
+    
+    "relUrl": "/tutorial/player.html"
+  },"12": {
+    "doc": "Animation Tracker",
+    "title": "Animation Tracker",
+    "content": " ",
+    "url": "/info/tracker.html",
+    
+    "relUrl": "/info/tracker.html"
+  },"13": {
+    "doc": "Animation Tracker",
+    "title": "What is this?",
+    "content": "The animation tracker is used to track and update animations associated with a player. ",
+    "url": "/info/tracker.html#what-is-this",
+    
+    "relUrl": "/info/tracker.html#what-is-this"
+  },"14": {
+    "doc": "Animation Tracker",
+    "title": "Usage",
+    "content": "To create a custom AnimationTracker, simply extend the AnimationTracker class and pass in your custom AnimationHolder to the type. Ensure the AnimationTracker is registered in the TrackerRegistry by calling .register() on the tracker. ",
+    "url": "/info/tracker.html#usage",
+    
+    "relUrl": "/info/tracker.html#usage"
+  },"15": {
+    "doc": "Animation Tracker",
+    "title": "Examples",
+    "content": "This mod by default comes with a PlayerAnimationTracker, and in most circumstances this is all you will need. For further examples, view Timeless Heroes implementation with custom superhero suits. ",
+    "url": "/info/tracker.html#examples",
+    
+    "relUrl": "/info/tracker.html#examples"
   }
 }

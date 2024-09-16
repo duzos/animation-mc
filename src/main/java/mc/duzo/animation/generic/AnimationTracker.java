@@ -3,7 +3,9 @@ package mc.duzo.animation.generic;
 import java.util.HashMap;
 import java.util.UUID;
 
+import mc.duzo.animation.DuzoAnimationMod;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
+import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
 
 import mc.duzo.animation.registry.Identifiable;
@@ -38,6 +40,9 @@ public abstract class AnimationTracker<T extends AnimationHolder> implements Ide
     }
     public void clear(UUID uuid) {
         animations.remove(uuid);
+    }
+    public void play(ServerPlayerEntity player, Identifier animation) {
+        DuzoAnimationMod.play(player, this, animation);
     }
 
     public AnimationTracker<T> register() {
