@@ -5,7 +5,6 @@
 
 ![Modrinth Downloads](https://img.shields.io/modrinth/dt/animator?logo=modrinth)
 
-
 **by [duzo](https://duzo.is-a.dev/)**
 
 ![](https://www.bisecthosting.com/partners/custom-banners/60f43741-8552-4ee2-b3e1-429e5cbe7dee.webp)
@@ -30,3 +29,5 @@ It allows for animations to be played on players easily
 
 ## Links
 [Github](https://github.com/duzos/animation-mc/)
+
+[Documentation](https://duzo.is-a.dev/animation-mc/)

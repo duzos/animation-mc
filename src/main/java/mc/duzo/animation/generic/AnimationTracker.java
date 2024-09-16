@@ -3,11 +3,11 @@ package mc.duzo.animation.generic;
 import java.util.HashMap;
 import java.util.UUID;
 
-import mc.duzo.animation.DuzoAnimationMod;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
 
+import mc.duzo.animation.DuzoAnimationMod;
 import mc.duzo.animation.registry.Identifiable;
 import mc.duzo.animation.registry.client.TrackerRegistry;
 
