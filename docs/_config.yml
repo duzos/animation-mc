@@ -1,0 +1,12 @@
+title: Duzo's Animation Mod
+description: Documentation for Developers wanting to use my animation library
+theme: just-the-docs
+
+url: https://duzos.github.io
+logo: "https://raw.githubusercontent.com/Duzos/animation-mc/master/src/main/resources/assets/animation/icon.png"
+
+aux_links:
+  "GitHub":
+    - "//github.com/duzos/animation-mc"
+  "Modrinth":
+    - "//modrinth.com/mod/animator"

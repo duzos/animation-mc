@@ -29,6 +29,13 @@ public class DuzoAnimationMod implements ModInitializer {
     public static void play(ServerPlayerEntity target, AnimationTracker tracker, AnimationHolder animation) {
         Network.toTracking(new PlayAnimationS2CPacket(target, tracker, animation), target);
     }
+
+    /**
+     * plays an animation to a target and updates all players near to the target
+     * @param target the player to animate
+     * @param tracker the tracker this animation should be performed on
+     * @param animation identifier of the registered animation
+     */
     public static void play(ServerPlayerEntity target, AnimationTracker tracker, Identifier animation) {
         Network.toTracking(new PlayAnimationS2CPacket(target.getUuid(), tracker.id(), animation), target);
     }
