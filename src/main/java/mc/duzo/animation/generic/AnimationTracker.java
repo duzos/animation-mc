@@ -45,6 +45,10 @@ public abstract class AnimationTracker<T extends AnimationHolder> implements Ide
         DuzoAnimationMod.play(player, this, animation);
     }
 
+    public void onDisconnect() {
+        animations.clear();
+    }
+
     public AnimationTracker<T> register() {
         return TrackerRegistry.register(this);
     }
