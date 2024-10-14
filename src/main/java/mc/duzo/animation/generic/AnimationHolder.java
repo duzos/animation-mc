@@ -1,9 +1,9 @@
 package mc.duzo.animation.generic;
 
-import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.render.entity.animation.Animation;
 import net.minecraft.client.render.entity.model.EntityModel;
 import net.minecraft.entity.AnimationState;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.util.Identifier;
 
 import mc.duzo.animation.player.PlayerAnimationHelper;
@@ -30,7 +30,7 @@ public abstract class AnimationHolder implements Identifiable {
         return this.id;
     }
 
-    public void update(EntityModel<?> model, float progress, AbstractClientPlayerEntity player) {
+    public void update(EntityModel<?> model, float progress, LivingEntity player) {
         // overwritten update method goes here
 
         if (this.isFinished(player)) {
@@ -46,16 +46,16 @@ public abstract class AnimationHolder implements Identifiable {
         this.state.startIfNotRunning(player.age);
     }
 
-    public boolean isFinished(AbstractClientPlayerEntity entity) {
+    public boolean isFinished(LivingEntity entity) {
         if (this.animation.looping()) return false; // Looping animations should extend this class so they properly finish
 
         return this.getRunningSeconds() >= this.animation.lengthInSeconds();
     }
 
-    protected void onFinished(AbstractClientPlayerEntity player) {
+    protected void onFinished(LivingEntity player) {
 
     }
-    protected void onStart(AbstractClientPlayerEntity player) {
+    protected void onStart(LivingEntity player) {
 
     }
 

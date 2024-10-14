@@ -3,7 +3,7 @@ package mc.duzo.animation.generic;
 import java.util.HashMap;
 import java.util.UUID;
 
-import net.minecraft.client.network.AbstractClientPlayerEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.Identifier;
 
@@ -23,7 +23,7 @@ public abstract class AnimationTracker<T extends AnimationHolder> implements Ide
         return id;
     }
 
-    public T get(AbstractClientPlayerEntity entity) {
+    public T get(LivingEntity entity) {
         UUID uuid = entity.getUuid();
 
         T anim = animations.get(uuid);
