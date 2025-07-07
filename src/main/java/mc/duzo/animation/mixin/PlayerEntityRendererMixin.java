@@ -1,5 +1,7 @@
 package mc.duzo.animation.mixin;
 
+import mc.duzo.animation.generic.VisibilityList;
+import mc.duzo.animation.generic.VisiblePart;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -31,12 +33,8 @@ public abstract class PlayerEntityRendererMixin extends LivingEntityRenderer<Abs
         AnimationInfo info = AnimationUtil.getInfo(player);
         if (info == null) return;
 
-        AnimationInfo.RenderType type = info.render();
+        VisibilityList type = info.render();
 
-        if (type == AnimationInfo.RenderType.NONE || type == AnimationInfo.RenderType.TORSO_HEAD && player.equals(client.player) && !client.gameRenderer.getCamera().isThirdPerson()) {
-            return;
-        }
-
-        type.apply(this.getModel());
+        type.apply(this.getModel(), player);
     }
 }

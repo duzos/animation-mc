@@ -3,6 +3,7 @@ package mc.duzo.animation.mixin;
 import java.util.List;
 import java.util.Optional;
 
+import mc.duzo.animation.generic.AnimationInfo;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -48,8 +49,10 @@ public abstract class PlayerEntityModelMixin<T extends LivingEntity>
 
         if (!AnimationUtil.isRunningAnimations(player)) return;
 
-        this.animation$getPart().resetTransform();
-        this.parts.forEach(ModelPart::resetTransform);
+        if (AnimationUtil.getInfo(player).transform() == AnimationInfo.Transform.ALL) {
+            this.animation$getPart().resetTransform();
+            this.parts.forEach(ModelPart::resetTransform);
+        }
 
         PlayerEntityModel<?> model = (PlayerEntityModel<?>) (Object) this;
 

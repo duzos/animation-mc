@@ -1,51 +1,6 @@
 package mc.duzo.animation.generic;
 
-import net.minecraft.client.network.AbstractClientPlayerEntity;
-import net.minecraft.client.render.entity.model.PlayerEntityModel;
-
-public record AnimationInfo(RenderType render, Perspective perspective, Movement movement, Transform transform) {
-
-    public enum RenderType {
-        ALL {
-            @Override
-            public void apply(PlayerEntityModel<AbstractClientPlayerEntity> model) {
-                model.setVisible(true);
-            }
-        }, // render player
-        FIRST_LAYER {
-            @Override
-            public void apply(PlayerEntityModel<AbstractClientPlayerEntity> model) {
-                model.setVisible(true);
-
-                model.jacket.visible = false;
-                model.leftPants.visible = false;
-                model.rightPants.visible = false;
-                model.leftSleeve.visible = false;
-                model.rightSleeve.visible = false;
-                model.hat.visible = false;
-            }
-        }, // render only first layer
-        TORSO_HEAD {
-            @Override
-            public void apply(PlayerEntityModel<AbstractClientPlayerEntity> model) {
-                FIRST_LAYER.apply(model);
-
-                model.leftLeg.visible = false;
-                model.rightLeg.visible = false;
-                model.rightArm.visible = false;
-                model.leftArm.visible = false;
-                model.body.visible = false;
-            }
-        }, // head AND no first layer
-        NONE {
-            @Override
-            public void apply(PlayerEntityModel<AbstractClientPlayerEntity> model) {
-                model.setVisible(false);
-            }
-        }; // render nothing
-
-        public abstract void apply(PlayerEntityModel<AbstractClientPlayerEntity> model);
-    }
+public record AnimationInfo(VisibilityList render, Perspective perspective, Movement movement, Transform transform) {
 
     public enum Movement {
         ALLOW,

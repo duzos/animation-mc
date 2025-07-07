@@ -32,6 +32,7 @@ public class PlayerAnimationHelper {
         animation.boneAnimations().forEach((key, list) -> {
             // TODO - fix "player" / "root" part not animating properly
             Optional<ModelPart> optional = getChild(model, key);
+            optional.ifPresent(ModelPart::resetTransform);
             optional.ifPresent(part -> list.forEach(transformation -> {
                 Keyframe[] keyframes = transformation.keyframes();
                 int i = Math.max(0, MathHelper.binarySearch(0, keyframes.length, index -> f <= keyframes[index].timestamp()) - 1);
@@ -95,12 +96,6 @@ public class PlayerAnimationHelper {
             anim.update(model, progress, livingEntity);
             return;
         }
-
-        /*
-        SuitAnimationHolder animSuit = SuitAnimationTracker.getAnimation(livingEntity);
-        if (animSuit.getModel() == null) return;
-        animSuit.getModel().copyTo(model);
-        */
     }
 
     public static void startAnimations(AbstractClientPlayerEntity entity) {

@@ -22,7 +22,7 @@ public abstract class AnimationHolder implements Identifiable {
         this.info = info;
     }
     protected AnimationHolder(Identifier id, Animation anim) {
-        this(id, anim, new AnimationInfo(AnimationInfo.RenderType.ALL, AnimationInfo.Perspective.THIRD_PERSON_FRONT, AnimationInfo.Movement.DISABLE, AnimationInfo.Transform.ALL));
+        this(id, anim, new AnimationInfo(VisibilityList.all(), AnimationInfo.Perspective.THIRD_PERSON_FRONT, AnimationInfo.Movement.DISABLE, AnimationInfo.Transform.ALL));
     }
 
     @Override
