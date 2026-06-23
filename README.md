@@ -1,33 +1,60 @@
-![Title](https://raw.githubusercontent.com/Duzos/animation-mc/master/src/main/resources/assets/animation/icon.png)
+<div align="center">
 
-![GitHub Release](https://img.shields.io/github/v/release/duzos/animation-mc?include_prereleases)
-![Modrinth Game Versions](https://img.shields.io/modrinth/game-versions/animator)
+<img src="https://raw.githubusercontent.com/Duzos/animation-mc/master/src/main/resources/assets/animation/icon.png" height="120" alt="Animator">
 
-![Modrinth Downloads](https://img.shields.io/modrinth/dt/animator?logo=modrinth)
+# Animator
 
-**by [duzo](https://duzo.is-a.dev/)**
+### A small Fabric library for playing animations on players, the easy way.
 
-![](https://www.bisecthosting.com/partners/custom-banners/60f43741-8552-4ee2-b3e1-429e5cbe7dee.webp)
+![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-62B47A?style=for-the-badge)
+![GitHub Release](https://img.shields.io/github/v/release/duzos/animation-mc?include_prereleases&style=for-the-badge)
 
-This project is sponsored by BisectHosting!
-Use code [duzo](https://www.bisecthosting.com/duzo) for **25%** OFF!
+[<img alt="modrinth" height="52" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/available/modrinth_vector.svg">](https://modrinth.com/mod/animator)
+[<img alt="fabric" height="52" src="https://cdn.jsdelivr.net/npm/@intergrav/devins-badges@3/assets/cozy/supported/fabric_vector.svg">](https://fabricmc.net/)
 
-## What does this mod do?
-This mod is a library for developers to use
+**by [Duzo](https://duzo.is-a.dev/)**
 
-It allows for animations to be played on players easily
+</div>
 
-## Mods that use this library
-- [Timeless Heroes](https://www.modrinth.com/mod/superhero)
+## What is it?
+
+Animator is a developer library for Fabric. It takes the pain out of playing custom animations on the player model — define an animation, fire it, and the library handles the rest in both first and third person.
+
+It's not a content mod on its own. You only need it because another mod asks for it.
+
+## Why use it?
+
+- **Player animations made simple** — play, blend, and stop animations without wiring up the rendering yourself.
+- **Built for reuse** — the same animation core powers several of Duzo's mods.
+- **Lightweight** — does one job and stays out of the way.
+
+## Mods using Animator
+
+- [Timeless Heroes](https://modrinth.com/mod/superhero)
+- [Persona](https://github.com/duzos/persona-mc)
+
+## Requirements
+
+- Minecraft **1.20.1** (Fabric)
+- [Fabric API](https://modrinth.com/mod/fabric-api)
+- Java **17+**
+
+## For players
+
+Just install it like any other mod — drop it in your `mods` folder alongside the mod that needs it, plus Fabric API.
+
+## For developers
+
+Add Animator as a dependency of your mod and call into the animation API. See the documentation for setup and examples:
+
+- [Documentation](https://duzo.is-a.dev/animation-mc/)
+
+## Links
+
+- [Modrinth](https://modrinth.com/mod/animator)
+- [GitHub](https://github.com/duzos/animation-mc/)
+- [Documentation](https://duzo.is-a.dev/animation-mc/)
 
 ## Credits
 
-### Developers:
-- [Duzo](https://duzo.is-a.dev/)
-
----
-
-## Links
-[Github](https://github.com/duzos/animation-mc/)
-
-[Documentation](https://duzo.is-a.dev/animation-mc/)
+Created by [Duzo](https://duzo.is-a.dev/).
