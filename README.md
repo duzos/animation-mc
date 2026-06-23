@@ -18,15 +18,15 @@
 
 ## What is it?
 
-Animator is a developer library for Fabric. It takes the pain out of playing custom animations on the player model — define an animation, fire it, and the library handles the rest in both first and third person.
+Animator is a developer library for Fabric. It takes the pain out of playing custom animations on the player model - define an animation, fire it, and the library handles the rest in both first and third person.
 
 It's not a content mod on its own. You only need it because another mod asks for it.
 
 ## Why use it?
 
-- **Player animations made simple** — play, blend, and stop animations without wiring up the rendering yourself.
-- **Built for reuse** — the same animation core powers several of Duzo's mods.
-- **Lightweight** — does one job and stays out of the way.
+- **Player animations made simple** - play, blend, and stop animations without wiring up the rendering yourself.
+- **Built for reuse** - the same animation core powers several of Duzo's mods.
+- **Lightweight** - does one job and stays out of the way.
 
 ## Mods using Animator
 
@@ -41,7 +41,7 @@ It's not a content mod on its own. You only need it because another mod asks for
 
 ## For players
 
-Just install it like any other mod — drop it in your `mods` folder alongside the mod that needs it, plus Fabric API.
+Just install it like any other mod - drop it in your `mods` folder alongside the mod that needs it, plus Fabric API.
 
 ## For developers
 
